@@ -1,6 +1,10 @@
 import requests
 import json
 
+# Disable SSL Warnings for self-signed certificates
+requests.packages.urllib3.disable_warnings(
+    requests.packages.urllib3.exceptions.InsecureRequestWarning)
+
 ################ LOGIN ######################
 base_url = "https://sandboxdnac2.cisco.com/dna/"
 auth_endpoint = "system/api/v1/auth/token"
@@ -8,7 +12,7 @@ user = 'devnetuser'
 pw = 'Cisco123!'
 
 response = requests.post(
-    url=f"{base_url}{auth_endpoint}", auth=(user, pw)).json()
+    url=f"{base_url}{auth_endpoint}", auth=(user, pw), verify=False).json()
 # print(response)
 token = response['Token']
 
@@ -24,7 +28,7 @@ headers = {
 }
 
 response = requests.get(
-    url=f"{base_url}{health_url}", headers=headers, params=querystring).json()
+    url=f"{base_url}{health_url}", headers=headers, params=querystring, verify=False).json()
 
 print(json.dumps(response, indent=2, sort_keys=True))
 

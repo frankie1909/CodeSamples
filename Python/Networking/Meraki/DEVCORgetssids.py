@@ -14,7 +14,7 @@ headers = {
     "X-Cisco-Meraki-API-Key": token
 }
 
-base_url = "https://api.meraki.com/api/v0"
+base_url = "https://api.meraki.com/api/v1"
 
 
 def get_ssids():

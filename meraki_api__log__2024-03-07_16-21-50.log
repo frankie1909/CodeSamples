@@ -1,0 +1,10 @@
+2024-03-07 16:21:50       meraki:     INFO > Meraki dashboard API session initialized with these parameters: {'version': '1.43.0', 'api_key': '************************************9ea0', 'base_url': 'https://api.meraki.com/api/v1', 'single_request_timeout': 60, 'certificate_path': '', 'requests_proxy': '', 'wait_on_rate_limit': True, 'nginx_429_retry_wait_time': 60, 'action_batch_retry_wait_time': 60, 'network_delete_retry_wait_time': 240, 'retry_4xx_error': False, 'retry_4xx_error_wait_time': 60, 'maximum_retries': 2, 'simulate': False, 'be_geo_id': None, 'caller': None, 'use_iterator_for_get_pages': False}
+2024-03-07 16:21:50       meraki:    DEBUG > {'tags': ['networks', 'configure'], 'operation': 'getNetwork', 'method': 'GET', 'url': '/networks/N_575334852396775991', 'params': None}
+2024-03-07 16:21:50       meraki:     INFO > GET https://api.meraki.com/api/v1/networks/N_575334852396775991
+2024-03-07 16:21:50       meraki:     INFO > networks, getNetwork - 200 OK
+2024-03-07 16:21:50       meraki:    DEBUG > {'tags': ['networks', 'configure'], 'operation': 'deleteNetwork', 'method': 'DELETE', 'url': '/networks/N_575334852396775991'}
+2024-03-07 16:21:50       meraki:     INFO > DELETE https://api.meraki.com/api/v1/networks/N_575334852396775991
+2024-03-07 16:21:55       meraki:     INFO > networks, deleteNetwork - 204 No Content
+2024-03-07 16:21:55       meraki:    DEBUG > {'tags': ['networks', 'configure'], 'operation': 'getNetwork', 'method': 'GET', 'url': '/networks/N_575334852396775991', 'params': None}
+2024-03-07 16:21:55       meraki:     INFO > GET https://api.meraki.com/api/v1/networks/N_575334852396775991
+2024-03-07 16:21:56       meraki:    ERROR > networks, getNetwork - 404 Not Found, b''
